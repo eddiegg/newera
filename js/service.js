@@ -1,19 +1,19 @@
 let http = require("http");
 let url = require("url");
 
-function start(route) {
+function start(route, handle) {
     function onRequest(request, response) {
         let pathname = url.parse(request.url).pathname;
         console.log("Request for " + pathname + " received.");
 
-        route(pathname);
+        route(handle, pathname, response);
 
-        response.writeHead(200, { "Content-Type": "text/plain" });
-        response.write("hi,eddie");
-        response.end();
+        // response.writeHead(200, { "Content-Type": "text/plain" });
+        // response.write("hi,eddie");
+        // response.end();
     }
     http.createServer(onRequest).listen(9999);
-    console.log("server started");
+    console.log("Server has started");
 }
 
 exports.start = start;
