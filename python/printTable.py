@@ -7,7 +7,7 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
 
 def printTable(table):
     # 行列互换的新列表
-    ntable = list(map(list, zip(*table)))   \
+    ntable = list(map(list, zip(*table)))
     # 找到最长元素长度
     nline = []
     for line in ntable:
