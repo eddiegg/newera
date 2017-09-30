@@ -20,6 +20,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
             'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 for quizNum in range(2):
+    answerKeyFile = open('answer%s'%(quizNum+1),'w')
     quizFile = open('quiz%s'%(quizNum+1),'w')
     quizFile.write('''Name:
 Date:
@@ -31,7 +32,6 @@ Period:
     states = list(capitals.keys())
     random.shuffle(states)   #直接打乱了states列表的顺序
 
-    answerKeyFile = open('answer%s'%(quizNum+1),'w')
 
     for questionNum in range(50):
         correctAnswer = capitals[states[questionNum]]
