@@ -1,2 +1,2 @@
 import os,random
-random.shuffle
+random.shuffl
