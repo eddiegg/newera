@@ -16,5 +16,3 @@ elif len(sys.argv) == 2:
 
 print(dict(mcbshelf.items()))
 mcbshelf.close()
-
-['12']
